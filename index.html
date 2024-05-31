@@ -12,6 +12,7 @@
 
     <div class="Navbar">
         <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
         <a href="#About">About</a>
         <a href="#GitHub">GitHub</a>
         <a href="#Contact">Contact</a>
@@ -42,6 +43,55 @@
         </strong>
     </div>
 
+    <div id="Slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="Images/self.jpg" alt="Picture of yourself">
+                    <div class="text">I'm available to assist you on your project!</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_JS.jpeg" alt="HTML, CSS, and JS logos"> 
+                    <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Python.png" alt="Python logo">
+                    <div class="text">the popular programming language Python,</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Csharp.png" alt="C# logo">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL.jpg" alt="SQL logo"> 
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/Apple.jpeg" alt="Apple logo">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">I'm also Proficient in MacOS!</a></div> 
+                </div>
+
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> 
+            
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
 
     <div class="Row" id="About">
 
@@ -54,14 +104,13 @@
             <p>
                 I'm a current student and aspiring software developer attending The Tech Academy.
                 <br>
-                <br>So far, I've learned how to code with HTML and CSS.
+                <br>So far, I've learned how to code with HTML, CSS, and JavaScript.
                 <br>
                 <br>If you have a project you would like help with, please feel free to <a href="#Contact">Contact</a>
                 me below!
             </p>
         </div>
     </div>
-
 
     <div class="Row" id="GitHub">
 
@@ -90,17 +139,40 @@
         <div class="Column_1 Column_tall">
             <h1>Contact</h1>
             <label>Name:</label>
-            <input type="text" placeholder="Insert First/Last Name">
+            <input type="text" placeholder="Insert Full Name Here">
             <label>Email:</label>
-            <input type="text" id="Email" name="Email" placeholder="Insert Email Address">
+            <input type="text" placeholder="Insert Email Address Here">
             <label>Message:</label>
-            <input type="text" id="Message" name="Message" placeholder="Insert Message">
+            <input type="text" id="Message" name="Message" placeholder="Insert Message Here">
             <input type="submit" value="Submit!">
             </form>
         </div>
     </div>
 
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+             <form action="" method="POST" class="form-container"> 
+                 <h1>Contact</h1>
+                 <label for="name"><b>Name</b></label>
+                   <input type="text" placeholder="Insert Full Name Here" name="name" required>
+                 <label for="phone"><b>Email</b></label>	
+                   <input type="text" placeholder="Insert Email Address Here" name="email" required>
+                 <label for="message"><b>Message</b></label>
+                   <input type="text" placeholder="Insert Message Here" name="message">
+      
+                 <button type="submit" class="btn">SUBMIT</button>
+                 <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+             </form>
+        </div>
+     </div>
+     
+
 </body>
+
+<script src="portfolio.js">
+
+</script>
 
 <footer>
 
