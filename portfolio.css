@@ -68,7 +68,7 @@ img {
 img:hover {
     filter: grayscale(5%);
     transition: transform 1s;
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 
 .img_2 {
